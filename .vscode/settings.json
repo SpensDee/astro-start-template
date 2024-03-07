@@ -1,0 +1,16 @@
+{
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false,
+    "**/node_modules": false,
+    "**/yarn.lock": false,
+    "**/.gitignore": false,
+    "**/package-lock.json": false,
+    "**/.eslintrc.cjs": false
+  },
+  "explorerExclude.backup": {}
+}
