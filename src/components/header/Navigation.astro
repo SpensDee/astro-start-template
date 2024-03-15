@@ -1,0 +1,43 @@
+---
+
+const currentPath = Astro.url.pathname;
+
+var pageLinks = [
+    { url: '/', title: 'Home' },
+    { url : '/services', title:  'services'},
+    { url: '/portfolio', title: 'portfolio' },
+]
+---
+
+<nav>
+    <ul class="menu">
+        {pageLinks.map(link => ( 
+            <li class="page-link">
+                <a 
+                class={currentPath === link.url ? 'page-current' : ''} 
+                href={link.url}>
+                    {link.title}
+                </a>
+            </li>
+        ))} 
+    </ul>
+</nav>
+
+<style lang="scss">
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    .page-current {
+        color: lime;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+</style>
