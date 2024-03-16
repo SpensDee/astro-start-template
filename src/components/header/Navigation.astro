@@ -1,25 +1,28 @@
 ---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from './../../utils/i18n/i18n';
 
-const currentPath = Astro.url.pathname;
-
-var pageLinks = [
-    { url: '/', title: 'Home' },
-    { url : '/services', title:  'services'},
-    { url: '/portfolio', title: 'portfolio' },
-]
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <nav>
     <ul class="menu">
-        {pageLinks.map(link => ( 
-            <li class="page-link">
-                <a 
-                class={currentPath === link.url ? 'page-current' : ''} 
-                href={link.url}>
-                    {link.title}
-                </a>
-            </li>
-        ))} 
+        <li>
+            <a href={translatePath('/')}>
+              {t('nav.home')}
+            </a>
+        </li>
+        <li>
+            <a href={translatePath('/portfolio/')}>
+              {t('nav.portfolio')}
+            </a>
+        </li>
+        <li>
+            <a href={translatePath('/blog/')}>
+              {t('nav.blog')}
+            </a>
+        </li>
     </ul>
 </nav>
 

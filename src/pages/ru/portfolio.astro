@@ -1,0 +1,16 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/header/Header.astro";
+import Container from "../../components/Container.astro";
+import Title from "../../components/Title.astro";
+
+changeLanguage("ru");
+---
+
+<Layout title="Home">
+	<Header/>
+	<Container>
+		<Title title={t('portfolio.title')}/>
+	</Container>
+</Layout>

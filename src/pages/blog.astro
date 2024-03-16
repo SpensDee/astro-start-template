@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { t, changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/Header.astro";
 import Container from "../components/Container.astro";
 import Title from "../components/Title.astro";
@@ -9,9 +9,8 @@ changeLanguage("uk");
 ---
 
 <Layout title="Home">
-		<Header/>
-		<Container>
-			<Title title={t('home.title')}/>
-		</Container>
+	<Header/>
+	<Container>
+		<Title title={t('blog.title')}/>
+	</Container>
 </Layout>
-

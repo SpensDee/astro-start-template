@@ -38,14 +38,14 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 Усі команди запускаються з кореня проекту, з терміналу:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`            | Встановлює залежності                            |
-| `yarn run dev`            | Запускає локальний з портом `localhost:4321`     |
-| `yarn run build`          | Збирає проєкт `./dist/`                          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
+| `yarn install`             | Встановлює залежності                            |
+| `yarn run dev`             | Запускає локальний з портом `localhost:4321`     |
+| `yarn run build`           | Збирає проєкт `./dist/`                          |
+| `npm run preview`          | Preview your build locally, before deploying     |
+| `npm run astro ...`        | Run CLI commands like `astro add`, `astro check` |
+| npx astro-i18next generate | generate translate pages                         |
 
 ```
 Встановлює залежності
