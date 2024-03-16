@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations, useTranslatedPath } from './../../utils/i18n/i18n';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../utils/i18n/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -42,5 +42,9 @@ const translatePath = useTranslatedPath(lang);
         color: lime;
         text-decoration: underline;
         text-underline-offset: 10px;
+    }
+    a {
+        white-space: nowrap;
+        user-select: none;
     }
 </style>

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import logoIcon from './../assets/logo.svg';
+
+const { link = '/', alt = '' } = Astro.props;
+---
+
+<a href={link}>
+    <Image src={logoIcon} width={140} height={84} alt='Logo'/>
+</a>
+
+
+
+<style lang="scss">
+    @media(max-width: 768px) {
+        img {
+            max-width: 100px;
+            max-height: 44px;
+        }
+    }
+</style>

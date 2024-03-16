@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import i18next, { t, changeLanguage } from "i18next";
-import Header from "../../components/header/Header.astro";
-import Container from "../../components/Container.astro";
+import { t, changeLanguage } from "i18next";
+import Header from "../../components/Header.astro";
 import Title from "../../components/Title.astro";
 
 changeLanguage("ru");
@@ -10,8 +9,6 @@ changeLanguage("ru");
 
 <Layout title="Home">
 		<Header/>
-		<Container>
-			<Title title={t('home.title')}/>
-		</Container>
+		<Title title={t('home.title')}/>
 </Layout>
 
