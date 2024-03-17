@@ -1,4 +1,4 @@
-import { ui, defaultLang, showDefaultLang } from "./ui";
+import { ui, defaultLang, showDefaultLang, languages } from "./ui";
 
 // визначення мови сторінки на основі поточної URL-адреси
 export function getLangFromUrl(url: URL) {
@@ -20,3 +20,11 @@ export function useTranslatedPath(lang: keyof typeof ui) {
     return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`;
   };
 }
+
+export function pathAfterLanguage(pathname: URL) {
+  const langKeys = Object.keys(languages);
+  const segments = pathname.pathname.split("/");
+  const langIndex = segments.findIndex(segment => langKeys.includes(segment));
+  return langIndex !== -1 ? segments.slice(langIndex + 1).join('/') : pathname.pathname;
+}
+
