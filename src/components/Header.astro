@@ -1,13 +1,21 @@
 ---
 import Logo from './Logo.astro';
 import Navigator from './Navigation.astro';
-import LanguagePicker from './LanguagePicker.astro';
+import { LanguageSelector } from 'astro-i18next/components';
 ---
 
 <header>
     <Logo/>
     <Navigator/>
-    <LanguagePicker/>
+    <LanguageSelector
+        languageMapping={
+            { 
+                en: "EN",
+                uk: 'UA',
+                ru: 'ru'
+            }
+        }
+        />
 </header>
 
 <style lang="scss">
